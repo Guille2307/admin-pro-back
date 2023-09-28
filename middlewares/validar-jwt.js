@@ -4,7 +4,7 @@ const validarJWT = (req, res, next) => {
   const token = req.header("x-token");
 
   if (!token) {
-    return res.status(401).json({ ok: false, msg: "No existe el token" });
+    return res.status(200).json({ ok: false, msg: "No existe el token" });
   }
 
   try {
